@@ -127,17 +127,20 @@ public class FornecedoresDAO {
 
 //TESTE SALVAR
 		/*
-		 * Fornecedores f1 = new Fornecedores(); f1.setDescricao("DESCRICAO 1");
-		 * 
-		 * Fornecedores f2 = new Fornecedores(); f2.setDescricao("DESCRICAO 2");
-		 * 
-		 * FornecedoresDAO fdao = new FornecedoresDAO();
-		 * 
-		 * try { fdao.salvar(f1); fdao.salvar(f2); fdao.excluir(4); System.out.println(
-		 * "Salvo com sucesso"); } catch (SQLException e) { System.out.println(
-		 * "Erro ao salvar"); e.printStackTrace(); }
-		 */
-
+		  Fornecedores f1 = new Fornecedores(); f1.setDescricao("MARIA CLARA MENDONÇA");
+		  
+		  Fornecedores f2 = new Fornecedores(); f2.setDescricao("GUILHERME LUIZ DA SILVA");
+		  
+		  FornecedoresDAO fdao = new FornecedoresDAO();
+		  
+		  try { 
+		  fdao.salvar(f1); 
+		  fdao.salvar(f2); 
+		  System.out.println(
+		  "Salvo com sucesso"); } catch (SQLException e) { System.out.println(
+		  "Erro ao salvar"); e.printStackTrace(); }
+		 
+*/
 //TESTE EXCLUIR
 		/*
 		 * Fornecedores f1 = new Fornecedores(); f1.setCodigo(3L);
@@ -175,7 +178,7 @@ public class FornecedoresDAO {
 		 * System.out.println("Erro ao buscar"); e.printStackTrace(); }
 		 */
 
-// TESTE BUSCA DESCRICAO
+// TESTE LISTAR
 		/*
 		 * FornecedoresDAO fdao = new FornecedoresDAO();
 		 * 
@@ -189,7 +192,8 @@ public class FornecedoresDAO {
 		 * e.printStackTrace(); }
 		 */
 		
-		
+// TESTE BUSCA POR DESCRICAO
+/*		
 		Fornecedores f1 = new Fornecedores();
 		f1.setDescricao("ROD");
 		
@@ -208,5 +212,6 @@ public class FornecedoresDAO {
 			System.out.println("Erro ao listar");
 			e.printStackTrace();
 		}
+*/
 	}
 }

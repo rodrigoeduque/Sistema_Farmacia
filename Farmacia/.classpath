@@ -13,5 +13,7 @@
 	<classpathentry kind="lib" path="C:/Users/Rodrigo Duque/Projeto-Farmacia/Biblioteca/mysql-connector-java-5.1.49-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Rodrigo Duque/Projeto-Farmacia/Biblioteca/primefaces-6.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/all-themes-1.0.10.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/cdi-api-2.0.SP1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
