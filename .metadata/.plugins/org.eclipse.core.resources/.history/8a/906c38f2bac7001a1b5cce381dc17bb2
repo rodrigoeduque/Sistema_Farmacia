@@ -1,0 +1,9 @@
+package br.com.farmacia.factory;
+
+public class ConexaoFactory {
+	
+	private static final String USUARIO = "root";
+	private static final String SENHA = "Ana270419";
+	private static final String URL = "localhost:3306/sistema";
+	
+}

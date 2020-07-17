@@ -1,0 +1,24 @@
+package br.com.farmacia.DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import br.com.farmacia.domain.Fornecedores;
+import br.com.farmacia.factory.ConexaoFactory;
+
+public class FornecedoresDAO {
+
+	public void salvar(Fornecedores f) throws SQLException {
+
+		StringBuilder sql = new StringBuilder();
+		sql.append("INSERT INTO fornecedores");
+		sql.append("(descricao)");
+		sql.append("VALUES (?)");
+
+		Connection conexao = ConexaoFactory.conectar();
+
+		PreparedStatement comando = conexao.prepareStatement(sql.toString());
+		comando.setString(1, f.getDescricao());
+	}
+}
