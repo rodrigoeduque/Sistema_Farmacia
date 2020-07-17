@@ -115,3 +115,4 @@
 0:0:0:0:0:0:0:1 - - [16/Jul/2020:17:18:05 -0300] "GET /Farmacia/faces/javax.faces.resource/theme.css?ln=primefaces-afterdark HTTP/1.1" 200 18913
 0:0:0:0:0:0:0:1 - - [16/Jul/2020:17:18:05 -0300] "GET /Farmacia/faces/javax.faces.resource/images/ui-icons-light.png?ln=primefaces-afterdark HTTP/1.1" 200 22713
 0:0:0:0:0:0:0:1 - - [16/Jul/2020:19:56:49 -0300] "GET /Farmacia/faces/pages/index.xhtml HTTP/1.1" 200 5387
+0:0:0:0:0:0:0:1 - - [16/Jul/2020:21:44:59 -0300] "GET /Farmacia/faces/pages/index.xhtml HTTP/1.1" 200 5387
