@@ -52,7 +52,7 @@ public class FornecedoresBean {
 
 		}
 	}
-	
+
 	public void prepararNovo() {
 		fornecedores = new Fornecedores();
 	}
@@ -61,11 +61,11 @@ public class FornecedoresBean {
 
 		try {
 			FornecedoresDAO fdao = new FornecedoresDAO();
-			
+
 			fdao.salvar(fornecedores);
-			
+
 			ArrayList<Fornecedores> lista = fdao.listar();
-			
+
 			itens = new ListDataModel<Fornecedores>(lista);
 			JSFUtil.adicionarMensagemSucesso("Registro Salvo com Sucesso");
 		} catch (SQLException e) {
@@ -73,6 +73,51 @@ public class FornecedoresBean {
 			JSFUtil.adicionarMensagemErro(e.getMessage());
 		}
 
+	}
+
+	public void prepararExcluir() {
+		fornecedores = itens.getRowData();
+	}
+
+	public void excluir() {
+		try {
+			FornecedoresDAO fdao = new FornecedoresDAO();
+
+			fdao.excluir(fornecedores);
+
+			ArrayList<Fornecedores> lista = fdao.listar();
+			itens = new ListDataModel<Fornecedores>(lista);
+
+			JSFUtil.adicionarMensagemSucesso("Registro Excluido com Sucesso");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getLocalizedMessage());
+		}
+	}
+	
+	
+	
+	public void prepararEditar() {
+		fornecedores = itens.getRowData();
+	}
+	
+	public void editar() {
+		
+		
+		try {
+			FornecedoresDAO fdao = new FornecedoresDAO();
+			ArrayList<Fornecedores> lista = fdao.listar();
+			itens = new ListDataModel<Fornecedores>(lista);
+			JSFUtil.adicionarMensagemSucesso("Edição realizada com sucesso");
+			fdao.editar(fornecedores);
+			
+		} catch (SQLException e) {
+			JSFUtil.adicionarMensagemErro(e.getLocalizedMessage());
+			e.printStackTrace();
+		}
+		
+
+		
 	}
 
 }
