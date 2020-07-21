@@ -10,11 +10,21 @@ import javax.faces.model.ListDataModel;
 
 import br.com.farmacia.DAO.FornecedoresDAO;
 import br.com.farmacia.domain.Fornecedores;
-
+import br.com.farmacia.util.JSFUtil;
 
 @ManagedBean(name = "MBFornecedores")
 @ViewScoped
 public class FornecedoresBean {
+
+	private Fornecedores fornecedores;
+
+	public Fornecedores getFornecedores() {
+		return fornecedores;
+	}
+
+	public void setFornecedores(Fornecedores fornecedores) {
+		this.fornecedores = fornecedores;
+	}
 
 	private ListDataModel<Fornecedores> itens;
 
@@ -26,22 +36,43 @@ public class FornecedoresBean {
 		this.itens = itens;
 	}
 
-
 	@PostConstruct
 	public void prepararPesquisa() {
 
 		try {
 			FornecedoresDAO fdao = new FornecedoresDAO();
+
+			ArrayList<Fornecedores> lista = fdao.listar();
+
+			itens = new ListDataModel<Fornecedores>(lista);
+
+		} catch (SQLException e) {
+			JSFUtil.adicionarMensagemErro("ex.getMessage()");
+			e.printStackTrace();
+
+		}
+	}
+	
+	public void prepararNovo() {
+		fornecedores = new Fornecedores();
+	}
+
+	public void novo() {
+
+		try {
+			FornecedoresDAO fdao = new FornecedoresDAO();
+			
+			fdao.salvar(fornecedores);
 			
 			ArrayList<Fornecedores> lista = fdao.listar();
 			
 			itens = new ListDataModel<Fornecedores>(lista);
-			
+			JSFUtil.adicionarMensagemSucesso("Registro Salvo com Sucesso");
 		} catch (SQLException e) {
-			
 			e.printStackTrace();
-			
+			JSFUtil.adicionarMensagemErro(e.getMessage());
 		}
+
 	}
 
 }
