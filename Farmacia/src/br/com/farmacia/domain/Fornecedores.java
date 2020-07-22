@@ -2,14 +2,14 @@ package br.com.farmacia.domain;
 
 public class Fornecedores {
 
-	private Long codigo;
+	private Integer codigo;
 	private String descricao;
 
-	public Long getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(Long codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 

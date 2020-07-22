@@ -65,7 +65,7 @@ public class FornecedoresDAO {
 		Fornecedores retorno = null;
 		if (resultado.next()) {
 			retorno = new Fornecedores();
-			retorno.setCodigo(resultado.getLong("CODIGO"));
+			retorno.setCodigo(resultado.getInt("CODIGO"));
 			retorno.setDescricao(resultado.getString("DESCRICAO"));
 		}
 
@@ -86,7 +86,7 @@ public class FornecedoresDAO {
 
 		while (resultado.next()) {
 			Fornecedores f = new Fornecedores();
-			f.setCodigo(resultado.getLong("CODIGO"));
+			f.setCodigo(resultado.getInt("CODIGO"));
 			f.setDescricao(resultado.getString("DESCRICAO"));
 
 			lista.add(f);
@@ -114,7 +114,7 @@ public class FornecedoresDAO {
 
 		while (resultado.next()) {
 			Fornecedores fornecedores = new Fornecedores();
-			fornecedores.setCodigo(resultado.getLong("CODIGO"));
+			fornecedores.setCodigo(resultado.getInt("CODIGO"));
 			fornecedores.setDescricao(resultado.getString("DESCRICAO"));
 
 			lista.add(fornecedores);
