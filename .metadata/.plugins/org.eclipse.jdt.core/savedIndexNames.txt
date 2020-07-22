@@ -1,15 +1,1 @@
 INDEX VERSION 1.131+C:\Users\Rodrigo Duque\Projeto-Farmacia\Workspace\.metadata\.plugins\org.eclipse.jdt.core
-4272365990.index
-3805047917.index
-2364301629.index
-403644515.index
-3652055640.index
-3499446782.index
-1915983340.index
-1671692264.index
-1936270959.index
-613300989.index
-3968648207.index
-229187811.index
-50195475.index
-2962402730.index

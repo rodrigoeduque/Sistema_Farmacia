@@ -7,8 +7,6 @@
     <fullyQualifiedTypeName name="br.com.farmacia.factory.ConexaoFactory"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="br.com.farmacia.DAO.FornecedoresDAO"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
     <fullyQualifiedTypeName name="javax.annotation.ManagedBean"/>
     <fullyQualifiedTypeName name="javax.faces.view.ViewScoped"/>
@@ -18,8 +16,11 @@
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="com.mysql.jdbc.Driver"/>
     <fullyQualifiedTypeName name="br.com.farmacia.domain.Fornecedores"/>
-    <fullyQualifiedTypeName name="javax.faces.model.ListDataModel"/>
     <fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
     <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.bean.FornecedoresBean"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.DAO.FornecedoresDAO"/>
+    <fullyQualifiedTypeName name="javax.faces.model.ListDataModel"/>
     <fullyQualifiedTypeName name="br.com.farmacia.util.JSFUtil"/>
 </qualifiedTypeNameHistroy>
