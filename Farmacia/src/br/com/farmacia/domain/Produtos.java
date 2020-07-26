@@ -6,7 +6,7 @@ public class Produtos {
 	private String descricao;
 	private Integer quantidade;
 	private Double preco;
-	private Fornecedores fornecedores;
+	private Fornecedores fornecedores = new Fornecedores();
 
 	public Integer getCodigo() {
 		return codigo;
@@ -50,8 +50,8 @@ public class Produtos {
 
 	@Override
 	public String toString() {
-		return "Cód = " + codigo + ", Descrição =" + descricao + ", Quantidade =" + quantidade + ", Preço ="
-				+ preco + ", Fornecedor =" ;
+		return "| Cód = " + codigo + " | Descrição =" + descricao + " | Quantidade =" + quantidade + " | Preço ="
+				+ preco + " | Cód. Fornecedor =" + getFornecedores().getCodigo() + " | Nome Fornecedor = " + getFornecedores().getDescricao() + " |";
 	}
 	
 	

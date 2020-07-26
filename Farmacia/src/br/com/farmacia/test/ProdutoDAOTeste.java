@@ -3,6 +3,7 @@ package br.com.farmacia.test;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import br.com.farmacia.DAO.ProdutosDAO;
@@ -13,16 +14,17 @@ public class ProdutoDAOTeste {
 
 	// TESTE SALVAR PRODUTOS
 
-	// @Test
+	@Test
+	@Ignore
 	public void salvar() throws SQLException {
 
 		Produtos p1 = new Produtos();
-		p1.setDescricao("NEOSALDINA");
-		p1.setQuantidade(20);
-		p1.setPreco(10.50);
+		p1.setDescricao("OMEPRAZOL");
+		p1.setQuantidade(5);
+		p1.setPreco(12.0);
 
 		Fornecedores f1 = new Fornecedores();
-		f1.setCodigo(12);
+		f1.setCodigo(1);
 		p1.setFornecedores(f1);
 
 		ProdutosDAO pdao = new ProdutosDAO();
@@ -57,24 +59,25 @@ public class ProdutoDAOTeste {
 		pdao.editar(p1);
 	}
 
+	// TESTE LISTAR
 	@Test
-	public void buscaPorCodigo() {
-
-		Produtos p1 = new Produtos();
-		p1.setCodigo(2);
-
-		ProdutosDAO fdao = new ProdutosDAO();
+	
+	public void listar() throws SQLException {
+		ProdutosDAO pdao = new ProdutosDAO();
 
 		try {
-			fdao.buscaPorCodigo(p1);
-			System.out.println("Busca Realizada com Sucesso");
-			System.out.println(p1);
 
-			System.out.println();
+			ArrayList<Produtos> lista = pdao.listar();
+			System.out.println("Listando ...");
+			for (Produtos produtos : lista) {
+				System.out.println(produtos);
+				System.out.println();
+			}
+
 		} catch (SQLException e) {
-			System.out.println("Erro ao buscar");
+			System.out.println("Erro ao listar");
 			e.printStackTrace();
 		}
-
 	}
+
 }

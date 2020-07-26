@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import br.com.farmacia.domain.Fornecedores;
 import br.com.farmacia.domain.Produtos;
@@ -63,31 +64,39 @@ public class ProdutosDAO {
 
 	}
 
-	public Produtos buscaPorCodigo(Produtos p) throws SQLException {
+	public ArrayList<Produtos> listar() throws SQLException {
 		StringBuilder sql = new StringBuilder();
-		sql.append("SELECT * FROM PRODUTOS ");
-		sql.append("WHERE CODIGO = ?");
+		sql.append("SELECT P.CODIGO, P.DESCRICAO, P.QUANTIDADE, P.PRECO, F.CODIGO, F.DESCRICAO ");
+		sql.append("FROM PRODUTOS P  ");
+		sql.append("INNER JOIN FORNECEDORES F  ON F.CODIGO = P.FORNECEDORES_CODIGO");
 
 		Connection conexao = ConexaoFactory.conectar();
 		PreparedStatement comando = conexao.prepareStatement(sql.toString());
-		comando.setLong(1, p.getCodigo());
 
 		ResultSet resultado = comando.executeQuery();
 
-		Produtos retorno = null;
+		ArrayList<Produtos> lista = new ArrayList<Produtos>();
 
-		if (resultado.next()) {
-			retorno = new Produtos();
+		while (resultado.next()) {
 
-			retorno.setCodigo(resultado.getInt("CODIGO"));
-			retorno.setDescricao(resultado.getString("DESCRICAO"));
-			retorno.setQuantidade(resultado.getInt("QUANTIDADE"));
-			retorno.setPreco(resultado.getDouble("PRECO"));
-			retorno.setFornecedores(new Fornecedores()); /* verificar */
+			Fornecedores f = new Fornecedores();
 
+			f.setCodigo(resultado.getInt("F.CODIGO"));
+			f.setDescricao(resultado.getString("F.DESCRICAO"));
+
+			Produtos p = new Produtos();
+
+			p.setCodigo(resultado.getInt("P.CODIGO"));
+			p.setDescricao(resultado.getString("P.DESCRICAO"));
+			p.setQuantidade(resultado.getInt("P.QUANTIDADE"));
+			p.setPreco(resultado.getDouble("P.PRECO"));
+			p.setFornecedores(f);
+
+			lista.add(p);
 		}
 
-		return retorno;
+		return lista;
+
 	}
 
 }

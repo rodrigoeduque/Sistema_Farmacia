@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="br.com.farmacia.factory.ConexaoFactory"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -18,11 +17,14 @@
     <fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
     <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
     <fullyQualifiedTypeName name="br.com.farmacia.bean.FornecedoresBean"/>
+    <fullyQualifiedTypeName name="javax.faces.model.ListDataModel"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.domain.Produtos"/>
+    <fullyQualifiedTypeName name="org.junit.Ignore"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="br.com.farmacia.DAO.FornecedoresDAO"/>
-    <fullyQualifiedTypeName name="javax.faces.model.ListDataModel"/>
     <fullyQualifiedTypeName name="br.com.farmacia.util.JSFUtil"/>
-    <fullyQualifiedTypeName name="br.com.farmacia.DAO.ProdutosDAO"/>
     <fullyQualifiedTypeName name="br.com.farmacia.domain.Fornecedores"/>
-    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.DAO.ProdutosDAO"/>
 </qualifiedTypeNameHistroy>
