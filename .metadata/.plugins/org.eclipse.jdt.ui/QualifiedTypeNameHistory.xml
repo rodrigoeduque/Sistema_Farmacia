@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="br.com.farmacia.factory.ConexaoFactory"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
     <fullyQualifiedTypeName name="javax.annotation.ManagedBean"/>
     <fullyQualifiedTypeName name="javax.faces.view.ViewScoped"/>
     <fullyQualifiedTypeName name="javax.management.MXBean"/>
@@ -20,11 +19,13 @@
     <fullyQualifiedTypeName name="javax.faces.model.ListDataModel"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="org.junit.Test"/>
-    <fullyQualifiedTypeName name="br.com.farmacia.domain.Produtos"/>
     <fullyQualifiedTypeName name="org.junit.Ignore"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.domain.Fornecedores"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.domain.Produtos"/>
+    <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.DAO.ProdutosDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="br.com.farmacia.DAO.FornecedoresDAO"/>
     <fullyQualifiedTypeName name="br.com.farmacia.util.JSFUtil"/>
-    <fullyQualifiedTypeName name="br.com.farmacia.domain.Fornecedores"/>
-    <fullyQualifiedTypeName name="br.com.farmacia.DAO.ProdutosDAO"/>
 </qualifiedTypeNameHistroy>

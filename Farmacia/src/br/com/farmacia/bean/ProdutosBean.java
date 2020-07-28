@@ -95,16 +95,47 @@ public class ProdutosBean {
 
 	}
 	
-	public void excluir() {
+	public void excluir() throws SQLException {
 		try {
 			ProdutosDAO pdao = new ProdutosDAO();
 			pdao.excluir(produtos);
-			ArrayList<Produtos> lista = pdao.listar();
 			JSFUtil.adicionarMensagemSucesso("Registro Excluido com Sucesso");
+			ArrayList<Produtos> lista = pdao.listar();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			JSFUtil.adicionarMensagemErro(e.getLocalizedMessage());
+		} 
+	}
+	
+	
+	public void prepararEditar() {
+
+		try {
+			produtos = new Produtos();
+			FornecedoresDAO dao = new FornecedoresDAO();
+			comboFornecedores = dao.listar();
+		} catch (SQLException e) {
+			JSFUtil.adicionarMensagemErro(e.getMessage());
+			e.printStackTrace();
 		}
 	}
+	
+	public void editar() {
+
+		try {
+			ProdutosDAO pdao = new ProdutosDAO();
+			pdao.editar(produtos);
+
+			itens = pdao.listar();
+			JSFUtil.adicionarMensagemSucesso("Edição realizada com sucesso");
+
+		} catch (SQLException e) {
+			JSFUtil.adicionarMensagemErro("Erro" + e.getLocalizedMessage());
+			e.printStackTrace();
+		}
+
+	}
+
 	
 }

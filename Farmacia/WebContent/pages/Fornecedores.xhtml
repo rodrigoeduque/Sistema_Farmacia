@@ -64,14 +64,14 @@
 			appendTo="@(body)">
 			<h:form id="frmforNovo">
 				<h:panelGrid columns="2" id="pnforNovo">
-					<p:outputLabel value="Descrição" />
-					<h:inputText size="30" maxlength="50"
-						value="#{MBFornecedores.fornecedores.descricao}" />
+					<p:outputLabel value="Descrição" for="txtDescNovoFornecedor"/>
+					<h:inputText size="30" maxlength="50" id="txtDescNovoFornecedor" 
+						value="#{MBFornecedores.fornecedores.descricao}" required="true" requiredMessage="Atenção: Informe o nome do fornecedor antes de salvar"/>
 				</h:panelGrid>
 				<h:panelGrid columns="2">
 					<p:commandButton value="Salvar"
 						actionListener="#{MBFornecedores.novo}"
-						oncomplete="PF('dlgforNovo').hide(); PF('tabelaFornecedores').clearFilters();"
+						oncomplete="verificar(xhr, status, args, 'dlgforNovo', 'tbFornecedores');"
 						update=":frmFornecedores:tbFornecedores :msgGlobal" />
 
 					<p:commandButton value="Cancelar"
@@ -98,7 +98,7 @@
 					<p:commandButton value="Excluir"
 						actionListener="#{MBFornecedores.excluir}"
 						oncomplete="PF('dlgforExcluir').hide();PF('tabelaFornecedores').clearFilters();"
-						update=":frmFornecedores:tbFornecedores :msgGlobal" />
+						update=":frmFornecedores:tbFornecedores :msgGlobal"/>
 
 					<p:commandButton value="Cancelar"
 						onclick="PF('dlgforExcluir').hide();" />

@@ -19,6 +19,8 @@ public class FornecedoresBean {
 
 	private ArrayList<Fornecedores> itens;
 	private ArrayList<Fornecedores> itensFiltrados;
+	
+	private ArrayList<Fornecedores> lista;
 
 	public Fornecedores getFornecedores() {
 		return fornecedores;
@@ -86,9 +88,11 @@ public class FornecedoresBean {
 
 			fdao.excluir(fornecedores);
 
-			ArrayList<Fornecedores> lista = fdao.listar();
+			lista = fdao.listar();
 
 			JSFUtil.adicionarMensagemSucesso("Registro Excluido com Sucesso");
+			System.out.println("Excluido: " + fornecedores.getDescricao());
+			System.out.println(fdao.listar());
 		} catch (SQLException e) {
 			e.printStackTrace();
 			JSFUtil.adicionarMensagemErro(e.getLocalizedMessage());
